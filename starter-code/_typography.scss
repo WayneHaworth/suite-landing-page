@@ -1,0 +1,42 @@
+html {
+    font-family: 'Epilogue', sans-serif;
+}
+
+h1, h2, h3 {
+    color: $darkgrey;
+}
+
+@mixin heading-xl {
+    font-size: 4.5rem;
+    letter-spacing: -1px;
+    line-height: 78px;
+}
+
+@mixin heading-l {
+    font-size: 3rem;
+    letter-spacing: -0.5px;
+    line-height: 56px;
+}
+
+@mixin heading-m {
+    font-size: 1.125rem;
+    letter-spacing: -0.2px;
+    line-height: 32px;
+    text-transform: uppercase;    
+}
+
+@mixin heading-s {
+    font-size: 1rem;
+    letter-spacing:   2.5px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: 400;    
+}
+
+@mixin quote {
+    font-size: 1rem;
+    letter-spacing: -0px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: 400;    
+}

@@ -1,0 +1,8 @@
+@import 'colours';
+@import 'typography';
+@import 'buttons';
+
+
+h1 {
+    @include heading-s;
+}
