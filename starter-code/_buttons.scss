@@ -1,0 +1,38 @@
+.btn {
+    border-radius: 6px;
+
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
+
+@mixin btn-primary {
+    width: 256px;
+    height: 61px;
+    background: $darkgrey;
+
+    @include body;
+    font-weight: bold;
+    color: $cream;
+
+    &:hover {
+        background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+    }
+}
+
+@mixin btn-secondary {
+    width: 182px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid $darkgrey;
+    
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: $darkgrey;
+
+    &:hover {
+        background-color: $darkgrey;
+        color: $cream;
+    }
+}
+

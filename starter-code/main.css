@@ -6,11 +6,50 @@ h1, h2, h3 {
   color: #172339;
 }
 
-h1 {
-  font-size: 1rem;
-  letter-spacing: 2.5px;
-  line-height: 26px;
-  text-transform: uppercase;
-  font-weight: 400;
+.btn {
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #faf8f6;
+}
+
+.container {
+  margin: 16px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .btn {
+  width: 182px;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid #172339;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #172339;
+}
+
+header .btn:hover {
+  background-color: #172339;
+  color: #f3ede7;
 }
 /*# sourceMappingURL=main.css.map */
