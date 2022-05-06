@@ -4,6 +4,11 @@ html {
 
 h1, h2, h3 {
     color: $darkgrey;
+    font-weight: 700;
+}
+
+@mixin header-thin {
+    font-weight: 400;
 }
 
 @mixin heading-xl {
@@ -18,6 +23,14 @@ h1, h2, h3 {
     letter-spacing: -0.5px;
     line-height: 56px;
     color: $darkgrey;
+}
+
+@mixin heading-mobile {
+    font-size: 2.375rem;
+    letter-spacing: -0.53px;
+    line-height: 44px;
+    color: $darkgrey;
+    margin-bottom: 2rem;
 }
 
 @mixin heading-m {
@@ -51,6 +64,7 @@ h1, h2, h3 {
     line-height: 32px;
     font-weight: 400;   
     color: $mediumgrey; 
+    margin-bottom: 2rem;
 }
 
 @mixin footer {
@@ -59,4 +73,8 @@ h1, h2, h3 {
     line-height: 32px;
     font-weight: 400;   
     color: $mediumgrey; 
+}
+
+h1 span {
+    @include header-thin;
 }

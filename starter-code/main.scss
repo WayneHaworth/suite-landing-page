@@ -2,25 +2,95 @@
 @import 'typography';
 @import 'buttons';
 
-html, body { margin: 0; padding: 0; }
-
-html {
-    background-color: $white;
-}
-
-.container {
-    margin: 16px;
-}
-
-
-
+html, body, h1, h2, h3, h4, p, ul { margin: 0; padding: 0; }
+html { font-size: 16px; background-color: $white; }
+.container { margin: 1rem; }
 
 header {
     display: flex;
     place-content: space-between;
     align-items: center;
+    padding-bottom: 3rem;
 
     .btn {
         @include btn-secondary;
+    }
+}
+
+.hero {
+    h1 {
+        @include heading-mobile;        
+    }
+
+    h1 .hero--curve {            
+        &:before {
+            background-image: url(assets/pattern-curved-line-1.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            content: "";
+            position: absolute;
+            width: 144.5px;
+            height: 46px;
+            top: 108px;
+            background-position-x: 4px;
+        }        
+    }
+
+    p {
+        @include body;
+    }
+
+    .hero--btn {
+        @include btn-primary;
+    }
+
+    .hero--product-shot {
+        background-image: url(assets/image-hero-landscape.png);
+        width: 100%;
+        height: 240px;
+    }
+
+    .hero--stats {
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 3rem;
+            margin: 5rem 0;
+
+            li {
+                @include heading-l;
+                font-weight: 700;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: center;
+
+                span {
+                    @include heading-s;
+                }
+            }
+        }
+    }
+}
+
+.testimonial {
+    background-color: $darkgrey;
+    color: $white;
+    height: 748px;
+    border-radius: 1rem;
+
+    .testomonial--jeremy {
+        background-image: url(assets/image-jeremy-small@2x.png);
+        height: 402px;
+        width: 343px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+
+    h2 {
+        color: $white;
+        text-align: center;
     }
 }

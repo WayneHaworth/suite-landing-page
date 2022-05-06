@@ -4,6 +4,11 @@ html {
 
 h1, h2, h3 {
   color: #172339;
+  font-weight: 700;
+}
+
+h1 span {
+  font-weight: 400;
 }
 
 .btn {
@@ -15,17 +20,18 @@ h1, h2, h3 {
   place-content: center;
 }
 
-html, body {
+html, body, h1, h2, h3, h4, p, ul {
   margin: 0;
   padding: 0;
 }
 
 html {
+  font-size: 16px;
   background-color: #faf8f6;
 }
 
 .container {
-  margin: 16px;
+  margin: 1rem;
 }
 
 header {
@@ -36,6 +42,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 3rem;
 }
 
 header .btn {
@@ -51,5 +58,121 @@ header .btn {
 header .btn:hover {
   background-color: #172339;
   color: #f3ede7;
+}
+
+.hero h1 {
+  font-size: 2.375rem;
+  letter-spacing: -0.53px;
+  line-height: 44px;
+  color: #172339;
+  margin-bottom: 2rem;
+}
+
+.hero h1 .hero--curve:before {
+  background-image: url(assets/pattern-curved-line-1.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  width: 144.5px;
+  height: 46px;
+  top: 108px;
+  background-position-x: 4px;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  letter-spacing: 0px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #49566d;
+  margin-bottom: 2rem;
+}
+
+.hero .hero--btn {
+  width: 256px;
+  height: 61px;
+  background: #172339;
+  font-size: 1.125rem;
+  letter-spacing: 0px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #49566d;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #f3ede7;
+}
+
+.hero .hero--btn:hover {
+  background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+}
+
+.hero .hero--product-shot {
+  background-image: url(assets/image-hero-landscape.png);
+  width: 100%;
+  height: 240px;
+}
+
+.hero .hero--stats ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  gap: 3rem;
+  margin: 5rem 0;
+}
+
+.hero .hero--stats ul li {
+  font-size: 3rem;
+  letter-spacing: -0.5px;
+  line-height: 56px;
+  color: #172339;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.hero .hero--stats ul li span {
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #49566d;
+}
+
+.testimonial {
+  background-color: #172339;
+  color: #faf8f6;
+  height: 748px;
+  border-radius: 1rem;
+}
+
+.testimonial .testomonial--jeremy {
+  background-image: url(assets/image-jeremy-small@2x.png);
+  height: 402px;
+  width: 343px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.testimonial h2 {
+  color: #faf8f6;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
