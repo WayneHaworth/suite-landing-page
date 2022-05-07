@@ -75,6 +75,6 @@ h1, h2, h3 {
     color: $mediumgrey; 
 }
 
-h1 span {
+:is(h1, h2, h3, h4) span {
     @include header-thin;
 }

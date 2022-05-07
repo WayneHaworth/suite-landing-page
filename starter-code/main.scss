@@ -2,27 +2,28 @@
 @import 'typography';
 @import 'buttons';
 
-html, body, h1, h2, h3, h4, p, ul { margin: 0; padding: 0; }
+/* reset */ html, body, h1, h2, h3, h4, p, ul, blockquote { margin: 0; padding: 0; }
+
+/*page setup */
 html { font-size: 16px; background-color: $white; }
 .container { margin: 1rem; }
 
-header {
+.header {
     display: flex;
     place-content: space-between;
     align-items: center;
     padding-bottom: 3rem;
 
-    .btn {
+    &__btn {
         @include btn-secondary;
     }
 }
 
 .hero {
-    h1 {
+    &__header {
         @include heading-mobile;        
     }
-
-    h1 .hero--curve {            
+    &--curve {            
         &:before {
             background-image: url(assets/pattern-curved-line-1.svg);
             background-size: 100%;
@@ -35,43 +36,38 @@ header {
             background-position-x: 4px;
         }        
     }
-
-    p {
+    &__text {
         @include body;
     }
-
-    .hero--btn {
+    &__btn {
         @include btn-primary;
     }
-
-    .hero--product-shot {
+    &__product-shot {
         background-image: url(assets/image-hero-landscape.png);
         width: 100%;
         height: 240px;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }   
+    &__stats__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 3rem;
+        margin: 5rem 0;
     }
-
-    .hero--stats {
-        ul {
+    &__stats__list__item {
+            @include heading-l;
+            font-weight: 700;
             display: flex;
             flex-direction: column;
-            list-style: none;
-            gap: 3rem;
-            margin: 5rem 0;
+            align-items: center;
+            align-self: center;
 
-            li {
-                @include heading-l;
-                font-weight: 700;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                align-self: center;
-
-                span {
-                    @include heading-s;
-                }
+            span {
+                @include heading-s;
             }
-        }
-    }
+    }    
 }
 
 .testimonial {
@@ -79,8 +75,19 @@ header {
     color: $white;
     height: 748px;
     border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .testomonial--jeremy {
+    &__header {
+        @include heading-mobile;
+        color: white;
+        text-align: center;
+        position: relative;
+    }
+
+    &__jeremy {
         background-image: url(assets/image-jeremy-small@2x.png);
         height: 402px;
         width: 343px;
@@ -88,9 +95,43 @@ header {
         background-repeat: no-repeat;
         background-position-x: center;
     }
+    &__curve {            
+        &:before {
+            background-image: url(assets/pattern-curved-line-2.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 40px;
+            top: -50px;
+            left: 0; 
+            right: 0; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }        
+    }   
 
-    h2 {
+    &__quote {
+        @include quote;
+        color: white;
+        font-size: 1.125rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    &__name {
         color: $white;
         text-align: center;
+        padding-top:2rem;
+        text-transform: uppercase;
+    }        
+
+    &__organisation {
+        @include heading-s;
+        color: white;
+        text-align: center;
     }
+
+
 }
