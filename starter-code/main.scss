@@ -23,7 +23,7 @@ html { font-size: 16px; background-color: $white; }
     &__header {
         @include heading-mobile;        
     }
-    &--curve {            
+    &__curve {            
         &:before {
             background-image: url(assets/pattern-curved-line-1.svg);
             background-size: 100%;
@@ -48,13 +48,17 @@ html { font-size: 16px; background-color: $white; }
         height: 240px;
         background-repeat: no-repeat;
         background-position-x: center;
-    }   
+        background-size: contain;
+    }  
+    &__stats {
+        margin-bottom:230px;
+    }
     &__stats__list {
         display: flex;
         flex-direction: column;
         list-style: none;
         gap: 3rem;
-        margin: 5rem 0;
+        margin: 4rem 0;
     }
     &__stats__list__item {
             @include heading-l;
@@ -80,6 +84,10 @@ html { font-size: 16px; background-color: $white; }
     flex-direction: column;
     align-items: center;
 
+    &__user_details {
+        margin-top: -70px;
+    }
+
     &__header {
         @include heading-mobile;
         color: white;
@@ -94,6 +102,8 @@ html { font-size: 16px; background-color: $white; }
         background-size: contain;
         background-repeat: no-repeat;
         background-position-x: center;
+        top: -193px;
+        position: relative;
     }
     &__curve {            
         &:before {
@@ -104,7 +114,7 @@ html { font-size: 16px; background-color: $white; }
             position: absolute;
             width: 50px;
             height: 40px;
-            top: -50px;
+            top: -80px;
             left: 0; 
             right: 0; 
             margin-left: auto; 
@@ -132,6 +142,22 @@ html { font-size: 16px; background-color: $white; }
         color: white;
         text-align: center;
     }
+}
 
+.footer {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+
+    &__socials__list {
+        list-style-type: none;
+        display: flex;
+        gap: 1.5rem;
+    }
+    
 
 }
+
